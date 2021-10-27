@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
 import django_heroku
 import dj_database_url
 
@@ -77,7 +76,6 @@ WSGI_APPLICATION = 'weatherproj.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-import dj_database_url
 #DATABASES = {
  #   'default': {
   #      'ENGINE': 'django.db.backends.sqlite3',
