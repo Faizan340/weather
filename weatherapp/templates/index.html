@@ -1,10 +1,11 @@
 <html>
 <head>
      <!--link rel="stylesheet" href="styles.css"-->
+     <title>Weather_Faizan</title>
      <style>
      button 
     {
-    background-color:#4CAF50; /* Green */
+    background-color:#032e73; 
     border: none;
     color: white;
     padding: 5px 3px;
@@ -12,10 +13,14 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+    border-radius: 12px;
+    }
+    button:hover{
+      color:black
     }
     body 
     {
-     background-color: lightblue;
+     background-color: #dfe2e8;
     }
     input[type=text] 
     {
@@ -24,11 +29,20 @@
     margin: 4px 0;
     box-sizing: border-box;
     }
+    img{
+      height: 220px;
+      width: 270px;
+      border-radius: 8px;
+    }
+    .details{
+      font-family:Apple Chancery, cursive;
+      color: #032e73;
+    }
      </style>
 </head>
-<h1>WEATHER APP</h1>
+<h1 class="details">WEATHER APP</h1>
 <body>
-<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTtErK_UBWjcH1U9m0-3AIica9v5Gm5gU0HA&usqp=CAU">
+<img src="https://image.freepik.com/free-vector/cloud-icon-vector-weather-symbol_53876-112095.jpg">
  <form action="" method="post">
       {% csrf_token %}
       <div class="">
@@ -38,12 +52,12 @@
         <form>
     {% if city is not None %}
     <div class="abc">
-      <h2>{{city|capfirst}}</h2>
+      <h2 class="details">{{city|capfirst}}</h2>
       <div>
-        <h3>Description: {{data.description|capfirst}}</h3>
-        <h3>Temperature: {{data.temperature}}C</h3>
-        <h3>Pressure: {{data.pressure}}</h3>
-        <h3>Humidity: {{data.humidity}}</h3>
+        <h3 class="details">Description: {{data.description|capfirst}}</h3>
+        <h3 class="details">Temperature: {{data.temperature}}C</h3>
+        <h3 class="details">Pressure: {{data.pressure}}</h3>
+        <h3 class="details">Humidity: {{data.humidity}}</h3>
     </div>
     {% endif %}
 </body>
